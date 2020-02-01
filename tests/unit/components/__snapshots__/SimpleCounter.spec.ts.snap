@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleCounter.vue renders initial html 1`] = `
+<div class="hello">
+  <h1>0</h1>
+  <div class="button-box"><button class="plus">+</button> <button class="minus">-</button></div>
+  test
+</div>
+`;

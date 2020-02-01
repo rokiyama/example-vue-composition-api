@@ -25,7 +25,7 @@ describe("SimpleCounter.vue", () => {
       localVue
     });
     wrapper.find("button.plus").trigger("click");
-    expect(incrementMock).toHaveBeenCalled();
+    expect(wrapper.html()).toMatchSnapshot();
   });
   it("call increment when plus buttons is clicked", () => {
     const wrapper = shallowMount(SimpleCounter, {

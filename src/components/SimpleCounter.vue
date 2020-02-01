@@ -17,13 +17,9 @@ import { useCount } from "@/composition/counter";
 export default createComponent({
   setup() {
     return {
-      ...useCount()
+      ...useCount(),
+      mode: process.env.NODE_ENV
     };
-  },
-  computed: {
-    mode() {
-      return process.env.NODE_ENV;
-    }
   }
 });
 </script>

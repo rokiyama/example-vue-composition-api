@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleTodo.vue correctly call addTodo when Add button is clicked 1`] = `
+<div class="count">
+  <p><input id="todo-input"> <button class="add-btn">Add</button></p>
+  <p>3 todos</p>
+  <ul>
+    <li>
+      <p>
+        todo1
+        <button class="delete-btn">Delete</button></p>
+    </li>
+    <li>
+      <p>
+        todo2
+        <button class="delete-btn">Delete</button></p>
+    </li>
+    <li>
+      <p>
+        todo3
+        <button class="delete-btn">Delete</button></p>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`SimpleTodo.vue renders initial html 1`] = `
+<div class="count">
+  <p><input id="todo-input"> <button class="add-btn">Add</button></p>
+  <p>3 todos</p>
+  <ul>
+    <li>
+      <p>
+        todo1
+        <button class="delete-btn">Delete</button></p>
+    </li>
+    <li>
+      <p>
+        todo2
+        <button class="delete-btn">Delete</button></p>
+    </li>
+    <li>
+      <p>
+        todo3
+        <button class="delete-btn">Delete</button></p>
+    </li>
+  </ul>
+</div>
+`;
