@@ -1,17 +1,19 @@
-import { ref, Ref } from "@vue/composition-api";
+import { Ref, reactive, toRefs } from "@vue/composition-api";
 import { Task } from "@/types/task";
 
 export function useAddingTask(tasks: Ref<Task[]>) {
-  const taskName = ref("");
+  const state = reactive({
+    taskName: ""
+  });
   const addTask = () => {
     tasks.value.push({
-      name: taskName.value,
+      name: state.taskName,
       done: false
     });
-    taskName.value = "";
+    state.taskName = "";
   };
   return {
-    taskName,
+    ...toRefs(state),
     addTask
   };
 }

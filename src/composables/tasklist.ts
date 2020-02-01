@@ -1,14 +1,16 @@
-import { ref } from "@vue/composition-api";
+import { toRefs, reactive } from "@vue/composition-api";
 import { Task } from "@/types/task";
 
 export function useTaskList() {
-  const tasks = ref<Task[]>([]);
+  const state = reactive<{ tasks: Task[] }>({
+    tasks: []
+  });
   const toggleTask = (task: Task) => {
-    const index = tasks.value.indexOf(task);
-    tasks.value.splice(index, 1, { ...task, done: !task.done });
+    const index = state.tasks.indexOf(task);
+    state.tasks.splice(index, 1, { ...task, done: !task.done });
   };
   return {
-    tasks,
+    ...toRefs(state),
     toggleTask
   };
 }

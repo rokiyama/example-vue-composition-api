@@ -1,15 +1,17 @@
-import { ref } from "@vue/composition-api";
+import { toRefs, reactive } from "@vue/composition-api";
 
 export function useCount() {
-  const counter = ref(0);
+  const state = reactive({
+    counter: 0
+  });
   const increment = () => {
-    counter.value++;
+    state.counter++;
   };
   const decrement = () => {
-    counter.value--;
+    state.counter--;
   };
   return {
-    counter,
+    ...toRefs(state),
     increment,
     decrement
   };
