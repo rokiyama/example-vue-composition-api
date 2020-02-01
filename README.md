@@ -31,3 +31,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### references
 
 - https://qiita.com/daikids/items/12c79b7b831276e9a088
+- https://qiita.com/s_nagasawa/items/ef70032f996face318e5
